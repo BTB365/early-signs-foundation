@@ -153,6 +153,17 @@ h1 {
   overflow-wrap: break-word;
 }
 
+h1,
+h2,
+h3,
+p,
+span,
+strong,
+small,
+a {
+  min-width: 0;
+}
+
 h2 {
   margin-bottom: 18px;
   font-size: clamp(2rem, 4vw, 4.1rem);
@@ -166,6 +177,7 @@ h3 {
 }
 
 .hero-copy {
+  width: 100%;
   max-width: 660px;
   color: rgba(255, 255, 255, 0.9);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
@@ -354,6 +366,93 @@ h3 {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.roadmap-section {
+  background: var(--surface);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.goal-card {
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 14px 34px rgba(21, 33, 31, 0.06);
+}
+
+.goal-card-featured {
+  border-color: rgba(201, 95, 75, 0.44);
+  background:
+    linear-gradient(180deg, rgba(201, 95, 75, 0.12), rgba(201, 95, 75, 0)),
+    var(--paper);
+}
+
+.goal-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.goal-topline strong {
+  color: var(--teal-dark);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.goal-step {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border-radius: 999px;
+  padding: 0 12px;
+  background: var(--teal-dark);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.goal-card h3 {
+  color: var(--teal-dark);
+  font-size: 1.35rem;
+}
+
+.goal-card p {
+  margin-bottom: 24px;
+}
+
+.goal-bar {
+  height: 9px;
+  margin-top: auto;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(21, 33, 31, 0.12);
+}
+
+.goal-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--coral);
+}
+
+.goal-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
 .symptom-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -524,23 +623,32 @@ input {
   }
 
   .hero {
-    min-height: 820px;
+    min-height: 760px;
+    align-items: end;
+    isolation: isolate;
+  }
+
+  .hero-media img {
+    object-position: 58% center;
   }
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(7, 29, 27, 0.74), rgba(7, 29, 27, 0.9)),
-      linear-gradient(0deg, rgba(7, 29, 27, 0.9), rgba(7, 29, 27, 0.1));
+      linear-gradient(180deg, rgba(7, 29, 27, 0.7) 0%, rgba(7, 29, 27, 0.55) 32%, rgba(7, 29, 27, 0.94) 68%),
+      linear-gradient(90deg, rgba(7, 29, 27, 0.86), rgba(7, 29, 27, 0.16));
   }
 
   .hero-content {
-    width: calc(100% - 40px);
-    margin: 0 auto 54px;
+    width: min(100% - 40px, 640px);
+    max-width: calc(100vw - 40px);
+    margin: 0 auto 42px;
+    overflow: hidden;
   }
 
   .impact-strip,
   .mission-grid,
   .video-section,
+  .roadmap-grid,
   .donate-section,
   .response-band,
   .diagnosis-table {
@@ -555,6 +663,7 @@ input {
     min-width: 0;
     min-height: auto;
     overflow: hidden;
+    padding: 26px 20px;
   }
 
   .impact-strip span {
@@ -562,6 +671,7 @@ input {
     max-width: 100%;
     font-size: 0.98rem;
     line-height: 1.45;
+    overflow-wrap: anywhere;
   }
 
   .section {
@@ -584,6 +694,17 @@ input {
     padding-right: 20px;
   }
 
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    width: auto;
+    max-width: 350px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
   .brand span:last-child {
     max-width: min(260px, calc(100vw - 88px));
   }
@@ -593,10 +714,32 @@ input {
   }
 
   h1 {
-    font-size: clamp(2.72rem, 12vw, 3rem);
+    font-size: clamp(2.48rem, 11vw, 2.9rem);
+    line-height: 1;
   }
 
   h2 {
     font-size: 2rem;
+  }
+
+  .hero-copy {
+    max-width: 340px;
+    font-size: 1.04rem;
+    overflow-wrap: anywhere;
+  }
+
+  .impact-strip strong,
+  .impact-strip span {
+    max-width: 340px;
+  }
+
+  .goal-card {
+    min-height: 0;
+  }
+
+  .goal-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
   }
 }
