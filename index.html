@@ -298,7 +298,12 @@
             show it before families go home.
           </p>
         </div>
-        <form class="donation-box" aria-label="Donation form">
+        <form
+          class="donation-box"
+          id="donation-form"
+          aria-label="Donation form"
+          data-checkout-url="https://givebutter.com/newborn-early-sign-awareness-video-hgqkr6"
+        >
           <label for="amount">Donation amount</label>
           <div class="amount-options" role="group" aria-label="Preset donation amounts">
             <button type="button" data-amount="25">$25</button>
@@ -307,17 +312,18 @@
             <button type="button" data-amount="300">$300</button>
           </div>
           <input id="amount" name="amount" type="number" min="1" placeholder="Custom amount" />
-          <a
+          <button
+            type="submit"
             class="button button-primary full-width"
             id="donation-link"
-            href="mailto:hello@earlysignsfoundation.org?subject=Donation%20to%20Early%20Signs%20Foundation"
           >
-            Start a donation
-          </a>
+            Continue to secure donation
+          </button>
           <p class="donation-note">
-            Replace this email link with your preferred donation processor when
-            your nonprofit account is ready.
+            Donations are processed through a secure checkout page. You can
+            give a preset amount or enter your own.
           </p>
+          <p class="donation-status" id="donation-status" role="status"></p>
         </form>
       </section>
     </main>
