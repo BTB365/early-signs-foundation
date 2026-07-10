@@ -1,337 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Early Signs Foundation</title>
-    <meta
-      name="description"
-      content="Early Signs Foundation is fundraising to create newborn early-sign awareness education for parents before discharge from hospitals and birthing centers."
-    />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Early Signs Foundation home">
-        <span class="brand-mark">ES</span>
-        <span>Early Signs Foundation</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#mission">Mission</a>
-        <a href="#video">Video</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#signs">Signs</a>
-        <a href="#donate">Donate</a>
-      </nav>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Early Signs Foundation — Newborn warning-sign awareness</title>
+<meta name="description" content="Early Signs Foundation is creating clear, compassionate education that helps parents recognize newborn warning signs before they leave the hospital or birthing center.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff8f0;color:#402a22;font-family:'Nunito Sans',sans-serif;overflow-x:hidden}
+  a{color:#c44a3a;text-decoration:none}
+  a:hover{color:#7f3820}
+  @keyframes es-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+  .pulse{display:inline-block;animation:es-pulse 1.6s ease-in-out infinite}
+  .wrap{max-width:1180px;margin:0 auto}
+  .btn-primary{background:#e05c4a;color:#fff;padding:15px 30px;border-radius:16px;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 10px 26px rgba(224,92,74,.35);display:inline-block}
+  .btn-primary:hover{background:#c44a3a;color:#fff}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#c44a3a;margin-bottom:10px}
+  .chip-btn{padding:16px 10px 16px 16px;border-radius:16px;font:800 17px 'Nunito Sans',sans-serif;cursor:pointer;text-align:left;background:#fff;color:#402a22;border:2px solid #f0d9c8;width:100%}
+  .chip-btn.sel{background:#e05c4a;color:#fff;border-color:#e05c4a}
+  .chip-btn .amt{display:block;font-size:19px}
+  .chip-btn .tag{display:block;font-size:11.5px;font-weight:700;margin-top:3px;opacity:.75}
+  .goal-card{background:#fff;border-radius:24px;padding:32px;box-shadow:0 10px 28px rgba(120,60,40,.09)}
+  .goal-icon{width:46px;height:46px;border-radius:16px;background:#fdeadd;color:#e05c4a;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px}
+  .goal-kicker{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#c44a3a;margin-bottom:8px}
+  .goal-title{font:600 20px/1.35 'Lora',serif;margin:0 0 12px}
+  .goal-body{font-size:14px;line-height:1.7;color:#7a5c4c;margin:0}
+  @media (max-width:900px){
+    .hero-grid,.story-grid,.goals-grid,.donate-grid{grid-template-columns:1fr !important}
+    .pad{padding-left:24px !important;padding-right:24px !important}
+    h1{font-size:34px !important}
+    header{padding:16px 24px !important}
+    header nav{flex-wrap:wrap;gap:14px 18px !important;justify-content:flex-start}
+    .hero-grid{gap:28px !important;padding-bottom:40px !important}
+    #story{margin:0 24px !important}
+    .story-grid{padding:34px 26px !important;gap:22px !important}
+    #goals{padding:48px 24px 8px !important}
+    .goals-grid > .goal-card{padding:26px !important}
+    .goals-grid > .goal-card[style*="grid-column"]{flex-direction:column !important;gap:14px !important;padding:26px !important}
+    .donate-grid > div{padding:32px 26px !important}
+  }
+  @media (max-width:560px){
+    h1{font-size:30px !important}
+    .hero-grid{padding-top:32px !important}
+    .hero-grid > div:last-child > div:first-child{height:300px !important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img
-            src="assets/early-signs-hero.png"
-            alt=""
-          />
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Newborn early-sign awareness before discharge</p>
-          <h1 id="hero-title">Early Signs Foundation</h1>
-          <p class="hero-copy">
-            We are creating clear, compassionate education that helps parents
-            recognize newborn warning signs before they leave the hospital or
-            birthing center, with the larger goal of making early-sign awareness
-            part of discharge policy.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#donate">Donate now</a>
-            <a class="button button-secondary" href="#video">See the project</a>
-          </div>
-        </div>
-      </section>
+  <header class="pad" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:20px 56px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:40px;height:40px;border-radius:14px;background:#e05c4a;color:#fff;display:flex;align-items:center;justify-content:center;font:700 15px 'Lora',serif">ES</div>
+      <div style="font:600 17px 'Lora',serif">Early Signs Foundation</div>
+    </div>
+    <nav style="display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700;color:#96705c">
+      <a href="#story" style="color:inherit">Our story</a>
+      <a href="#goals" style="color:inherit">Our goals</a>
+      <a href="#signs" style="color:inherit">The signs</a>
+      <a href="#donate" class="btn-primary" style="padding:11px 24px;border-radius:14px;font-size:14px;box-shadow:none"><span class="pulse">♥</span> Donate</a>
+    </nav>
+  </header>
 
-      <section class="impact-strip" aria-label="Campaign priorities">
+  <section class="hero-grid pad" style="display:grid;grid-template-columns:1fr .95fr;gap:52px;padding:56px 56px 64px;align-items:center">
+    <div>
+      <div style="display:inline-block;background:#fdeadd;color:#c44a3a;border-radius:999px;padding:8px 18px;font-size:13px;font-weight:800;margin-bottom:20px">For every family's first days home</div>
+      <h1 style="font:600 44px/1.18 'Lora',serif;margin:0 0 20px;letter-spacing:-.01em">No parent should learn the warning signs <em style="color:#e05c4a">after</em> the emergency.</h1>
+      <p style="font-size:16.5px;line-height:1.75;color:#7a5c4c;margin:0 0 14px;max-width:54ch">A newborn can't tell you what's wrong. A slightly different cry. Sleep that seems a little too deep. Skin a shade more yellow than yesterday. These small things are how babies ask for help — and most parents are never taught to hear them.</p>
+      <p style="font-size:16.5px;line-height:1.75;color:#7a5c4c;margin:0 0 28px;max-width:54ch">We're making a short, gentle video every family watches before leaving care — and pushing for the policies and protocols that make it standard. Your gift makes it real.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;row-gap:12px;align-items:center">
+        <a href="#donate" class="btn-primary">Give now — every dollar counts</a>
+        <a href="#story" style="color:#c44a3a;font-weight:800;font-size:14px">Read our story ↓</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div style="height:430px;border-radius:28px;overflow:hidden;box-shadow:0 20px 48px rgba(120,60,40,.18)">
+        <img src="assets/early-signs-hero.png" alt="Parent holding a newborn" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="position:absolute;left:-24px;bottom:-24px;background:#fff;border-radius:20px;padding:18px 24px;box-shadow:0 14px 32px rgba(120,60,40,.16);display:flex;align-items:center;gap:14px">
+        <div class="pulse" style="width:44px;height:44px;border-radius:50%;background:#fdeadd;color:#e05c4a;display:flex;align-items:center;justify-content:center;font-size:19px;flex:none">♥</div>
+        <div><div style="font:700 15px 'Lora',serif">First goal: $1,500</div><div style="font-size:12.5px;color:#96705c">funds the entire first video</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" style="margin:0 56px" class="pad-none">
+    <div class="story-grid" style="background:#402a22;border-radius:28px;padding:52px 56px;color:#f7e8dc;display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center">
+      <div>
+        <div style="font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:12px">The moment we want to prevent</div>
+        <h2 style="font:600 32px/1.3 'Lora',serif;margin:0;color:#fff">"Is this normal? Should we call someone?"</h2>
+      </div>
+      <div style="font-size:15px;line-height:1.8;color:#e6cfc0">
+        <p style="margin:0 0 14px">It's 2 a.m. on the third night home. The baby feels warm. She didn't finish her last feed. You search your memory for what the nurse said in those blurry hours before discharge — and find nothing.</p>
+        <p style="margin:0">That uncertainty is the gap we're closing. In newborns, hours matter: infections, jaundice, breathing problems, and seizures can turn serious before they look serious. A calm five-minute video, watched before going home, gives parents the confidence to act — to call, to ask again, to go in. <strong style="color:#fff">Acting early is never an overreaction.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="goals" class="pad" style="padding:72px 56px 8px">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="eyebrow">What we're fighting for</div>
+      <h2 style="font:600 34px/1.25 'Lora',serif;margin:0 auto;max-width:26ch">Five promises to every family in every birth setting.</h2>
+    </div>
+    <div class="goals-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div class="goal-card">
+        <div class="goal-icon">🗣</div>
+        <div class="goal-kicker">Goal · Policy</div>
+        <h3 class="goal-title">Warning signs, read aloud — every family, every time</h3>
+        <p class="goal-body">Just as rights are read word-for-word every single time, we want policy requiring birthing centers and midwives to read a short warning-signs statement, share the disclaimers, and show the video before any family goes home. Not sometimes. Every time.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon">🛡</div>
+        <div class="goal-kicker">Goal · Protocol</div>
+        <h3 class="goal-title">Stronger birth center &amp; midwife protocols</h3>
+        <p class="goal-body">Work alongside birth centers and midwives to strengthen safety protocols — clearer checklists, escalation steps, and transfer plans — so preventable accidents and missed warning signs stop happening in the first place.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon">🧰</div>
+        <div class="goal-kicker">Goal · Tools</div>
+        <h3 class="goal-title">The right tools in the right hands</h3>
+        <p class="goal-body">Help source the proper equipment and educational tools birth centers and midwives need to follow those protocols well — because a good protocol only works when the tools to carry it out are within reach.</p>
+      </div>
+      <div class="goal-card">
+        <div class="goal-icon">🏡</div>
+        <div class="goal-kicker">Goal · Culture</div>
+        <h3 class="goal-title">Normalize hybrid home births with hospital follow-ups</h3>
+        <p class="goal-body">Families shouldn't have to choose between the comfort of home and the safety of a hospital. We want to make hybrid births normal: birth at home, then routine hospital check-ups in the first days to screen for illness, infection, jaundice — anything a newborn can't tell us about.</p>
+      </div>
+      <div class="goal-card" style="grid-column:1/-1;display:flex;gap:24px;align-items:flex-start;padding:32px 36px">
+        <div class="goal-icon" style="margin-bottom:0;flex:none;font-size:18px">▶</div>
         <div>
-          <strong>$300 first goal</strong>
-          <span>Funds the first newborn early-sign awareness video</span>
+          <div class="goal-kicker">Goal · Education</div>
+          <h3 class="goal-title">A standard discharge video for any parent, anywhere</h3>
+          <p class="goal-body" style="max-width:90ch">Beyond any one hospital or birth center, we're creating a free, standard discharge video any parent can watch — and share. Grandparents, night nurses, doulas, friends who babysit: everyone who cares for a newborn can learn the warning signs, so the knowledge spreads far beyond the delivery room.</p>
         </div>
-        <div>
-          <strong>12 common signs</strong>
-          <span>Signs, likely diagnoses, and possible long-term effects</span>
-        </div>
-        <div>
-          <strong>Policy-ready</strong>
-          <span>Built to support hospital and birthing-center education</span>
-        </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="urgent-band" aria-labelledby="urgent-title">
-        <div>
-          <p class="eyebrow">If you are even a little concerned</p>
-          <h2 id="urgent-title">Call for help or go straight to the hospital.</h2>
-        </div>
-        <div class="urgent-copy">
-          <p>
-            The first several days after birth are especially important. Newborn
-            infections, breathing problems, jaundice, seizures, and head injuries
-            can become serious quickly and may affect the brain or body before
-            symptoms look dramatic.
-          </p>
-          <p>
-            Parents should never feel embarrassed for seeking care. If something
-            feels off, call the pediatrician or nurse line now. If your newborn
-            has a fever of 100.4°F or higher, trouble breathing, blue or gray
-            color, seizure-like movement, extreme sleepiness, or you cannot wake
-            them normally, go to emergency care or call 911.
-          </p>
-          <p>
-            Even if someone says it will probably be fine, keep treating your
-            concern as urgent if symptoms continue, worsen, or your instincts
-            say your baby is not right. Ask to be seen, ask again, seek a second
-            medical opinion, or go straight to the hospital.
-          </p>
-        </div>
-      </section>
+  <section id="signs" class="pad" style="padding:64px 56px 56px;text-align:center">
+    <div class="eyebrow">The signs every parent will learn</div>
+    <h2 style="font:600 30px/1.3 'Lora',serif;margin:0 auto 26px;max-width:26ch">Small signals. Big consequences. Easy to learn.</h2>
+    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:900px;margin:0 auto"></div>
+    <p style="font-size:14px;line-height:1.7;color:#96705c;margin:22px auto 0;max-width:64ch">If any of these appear — or your instincts simply say something is wrong — call your pediatrician, nurse line, or 911. When treatment is delayed, severe newborn illness can lead to brain injury, hearing loss, developmental delay, cerebral palsy, or worse. Minutes matter.</p>
+  </section>
 
-      <section class="section mission" id="mission">
-        <div class="section-intro">
-          <p class="eyebrow">Why it matters</p>
-          <h2>Minutes of awareness can change a newborn's path.</h2>
+  <section id="donate" class="pad" style="padding:16px 56px 80px">
+    <div class="donate-grid" style="background:#fff;border-radius:32px;box-shadow:0 20px 52px rgba(120,60,40,.13);display:grid;grid-template-columns:1fr 1fr;overflow:hidden">
+      <div style="padding:48px 52px;background:#e05c4a;color:#fff">
+        <div style="font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#f8c9be;margin-bottom:12px">Your gift, made visible</div>
+        <h2 style="font:600 34px/1.25 'Lora',serif;margin:0 0 16px">Watch your donation move the goal.</h2>
+        <p style="font-size:15px;line-height:1.75;color:#fbe0d9;margin:0 0 30px"><strong style="color:#fff">$1,500 creates the first video</strong> — script, filming, editing, and captions. From there we fund clinical review and translations, then the push for policy, protocols, and tools. Pick an amount and see exactly what it does.</p>
+        <div style="font-size:13px;font-weight:800;color:#f8c9be;margin-bottom:8px">Your gift covers <span id="pct-label">3.3%</span> of the first video</div>
+        <div style="height:14px;border-radius:999px;background:rgba(0,0,0,.22);overflow:hidden;margin-bottom:10px">
+          <div id="pct-bar" style="height:100%;border-radius:999px;background:#fff;transition:width .5s ease;width:3.3%"></div>
         </div>
-        <div class="mission-grid">
-          <p>
-            Newborns cannot tell us what hurts. Early symptoms can be subtle:
-            a different cry, unusual sleepiness, poor feeding, yellowing skin,
-            a fever, or breathing that does not look right. Families deserve a
-            calm, memorable guide before they are in a frightening moment.
-          </p>
-          <p>
-            Early Signs Foundation is raising funds to produce and distribute a
-            professionally made video that can be shown to parents before they
-            are discharged from hospitals and birthing centers. The bigger goal
-            is to make newborn early-sign awareness a routine part of policy,
-            not something families have to discover after a crisis begins.
-          </p>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;font-weight:700;color:#f8c9be"><span>$0</span><span>Goal 1 · $1,500</span></div>
+      </div>
+      <div style="padding:48px 52px">
+        <div style="font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#96705c;margin-bottom:16px">Choose your gift</div>
+        <div id="amounts" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px"></div>
+        <div style="background:#fff8f0;border-radius:16px;padding:16px 20px;margin-bottom:18px;display:flex;gap:12px;align-items:flex-start">
+          <span style="color:#e05c4a;font-size:17px;flex:none;margin-top:1px">♥</span>
+          <div style="font-size:14px;line-height:1.6;color:#7a5c4c"><strong id="impact-title" style="color:#402a22"></strong> — <span id="impact-body"></span></div>
         </div>
-      </section>
+        <!-- Replace href with your real checkout URL (Stripe, PayPal, Givebutter, etc.) -->
+        <a id="give-btn" href="#donate" style="display:block;background:#402a22;color:#fff;text-align:center;padding:17px;border-radius:16px;font-weight:800;font-size:16px">Give $50 with love →</a>
+        <p style="font-size:12.5px;line-height:1.6;color:#96705c;margin:14px 0 0;text-align:center">Secure checkout · preset or custom amounts · every dollar reported publicly</p>
+      </div>
+    </div>
+  </section>
 
-      <section class="section video-section" id="video">
-        <div class="video-copy">
-          <p class="eyebrow">The campaign</p>
-          <h2>A discharge-ready video for the first weeks of life.</h2>
-          <p>
-            Donations support scripting with clinical review, filming,
-            editing, captions, translation-ready assets, and outreach to
-            hospitals, birthing centers, birth workers, pediatric offices, and
-            community organizations.
-          </p>
-          <ul class="check-list">
-            <li>Realistic examples of warning signs without graphic imagery</li>
-            <li>Clear prompts for when to call a clinician, go to urgent care, or call 911</li>
-            <li>A format hospitals and birthing centers can show before families go home</li>
-          </ul>
-        </div>
-        <div class="video-panel" aria-label="Video concept preview">
-          <div class="play-button" aria-hidden="true"></div>
-          <p>Early Signs: A Newborn Warning Signs Guide</p>
-          <span>Fundraising now for production</span>
-        </div>
-      </section>
+  <footer class="pad" style="padding:0 56px 40px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.5px;color:#96705c">
+    <span style="font-weight:800;color:#402a22">Early Signs Foundation ♥</span>
+    <span>Educational information only. Always contact a licensed medical professional for newborn health concerns.</span>
+  </footer>
 
-      <section class="section roadmap-section" id="roadmap">
-        <div class="section-intro wide">
-          <p class="eyebrow">Campaign roadmap</p>
-          <h2>Three public goals to move early-sign education into practice.</h2>
-          <p>
-            Each milestone is public so supporters can see exactly what their
-            donations unlock. The first goal is intentionally reachable:
-            complete the first video, then build toward clinical review,
-            community distribution, and hospital or birthing-center adoption.
-          </p>
-        </div>
+</div>
 
-        <div class="roadmap-grid" aria-label="Fundraising goals">
-          <article class="goal-card goal-card-featured">
-            <div class="goal-topline">
-              <span class="goal-step">Goal 1</span>
-              <strong>$300</strong>
-            </div>
-            <h3>Video creation</h3>
-            <p>
-              Create the first short warning-sign video with a simple script,
-              visual examples, editing, and captions for parents to watch
-              before leaving care.
-            </p>
-            <div class="goal-bar" aria-label="$300 goal progress marker">
-              <span style="width: 33%"></span>
-            </div>
-            <small>First milestone: discharge-ready video draft</small>
-          </article>
+<script>
+(function () {
+  var GOAL = 1500;
+  var CHECKOUT_URL = 'https://givebutter.com/early-signs-foundation-e1awb1'; // Early Signs Foundation donation campaign
 
-          <article class="goal-card">
-            <div class="goal-topline">
-              <span class="goal-step">Goal 2</span>
-              <strong>$750</strong>
-            </div>
-            <h3>Clinical review and accessibility</h3>
-            <p>
-              Add pediatric review, stronger captions, a printable checklist,
-              and translation-ready files so the message is clearer, safer,
-              and ready for care teams to review.
-            </p>
-            <div class="goal-bar" aria-label="$750 goal progress marker">
-              <span style="width: 66%"></span>
-            </div>
-            <small>Second milestone: reviewed parent education toolkit</small>
-          </article>
+  var signs = ['Fever of 100.4°F or higher', 'Low temperature', 'Poor feeding', 'Hard to wake',
+    'Weak or unusual cry', 'Yellow skin or eyes', 'Fast or labored breathing', 'Blue or gray color',
+    'Repeated jerking or stiffening', 'Vomiting', 'Bulging soft spot', 'After a fall or head injury'];
+  var chipsEl = document.getElementById('chips');
+  signs.forEach(function (s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    d.style.cssText = 'background:#fdeadd;color:#c44a3a;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700';
+    chipsEl.appendChild(d);
+  });
 
-          <article class="goal-card">
-            <div class="goal-topline">
-              <span class="goal-step">Goal 3</span>
-              <strong>$1,500</strong>
-            </div>
-            <h3>Public launch and distribution</h3>
-            <p>
-              Publicize the video with social clips, QR-code flyers, and direct
-              outreach to hospitals, birthing centers, birth workers, and
-              community groups.
-            </p>
-            <div class="goal-bar" aria-label="$1,500 goal progress marker">
-              <span style="width: 100%"></span>
-            </div>
-            <small>Third milestone: outreach for policy and discharge use</small>
-          </article>
-        </div>
-      </section>
+  var presets = [
+    { v: 25, tag: 'captions one video' },
+    { v: 50, tag: 'a day of editing' },
+    { v: 100, tag: 'filming time' },
+    { v: 250, tag: 'a full production day' }
+  ];
+  var selected = 50;
 
-      <section class="section" id="signs">
-        <div class="section-intro wide">
-          <p class="eyebrow">What the video will cover</p>
-          <h2>Common signs, common diagnoses, and what they can lead to.</h2>
-          <p>
-            This is educational content, not a diagnosis tool. The video will
-            teach families the signs that should trigger a call to a clinician,
-            urgent care, emergency care, or 911. Severe newborn illness can lead
-            to brain injury, seizures, hearing or vision loss, developmental
-            delay, cerebral palsy, intellectual disability, or death, especially
-            when treatment is delayed.
-          </p>
-        </div>
+  function impact(a) {
+    if (a <= 25) return ['Your $' + a + ' gives every word a voice', 'it funds captioning and accessible text, so the warning signs reach deaf and hard-of-hearing parents too.'];
+    if (a <= 50) return ['Your $' + a + ' shapes the message', 'it funds editing time that turns raw footage into a calm, five-minute guide a tired new parent can actually absorb.'];
+    if (a <= 100) return ['Your $' + a + ' puts the signs on camera', 'it funds filming the realistic, non-graphic examples that help parents recognize a warning sign the moment it appears.'];
+    return ['Your $' + a + ' funds a full production day', 'a whole day of filming and directing — the single biggest step toward a discharge-ready video in every birth setting.'];
+  }
 
-        <div class="symptom-cloud" aria-label="Common newborn warning signs">
-          <span>Fever of 100.4°F or higher</span>
-          <span>Low temperature</span>
-          <span>Poor feeding</span>
-          <span>Hard to wake</span>
-          <span>Weak or unusual cry</span>
-          <span>Yellow skin or eyes</span>
-          <span>Fast or labored breathing</span>
-          <span>Blue or gray color</span>
-          <span>Repeated jerking or stiffening</span>
-          <span>Vomiting</span>
-          <span>Bulging soft spot</span>
-          <span>After a fall or head injury</span>
-        </div>
+  var amountsEl = document.getElementById('amounts');
+  function render() {
+    var pct = Math.min(100, Math.round((selected / GOAL) * 1000) / 10);
+    document.getElementById('pct-label').textContent = pct + '%';
+    document.getElementById('pct-bar').style.width = pct + '%';
+    var im = impact(selected);
+    document.getElementById('impact-title').textContent = im[0];
+    document.getElementById('impact-body').textContent = im[1];
+    var btn = document.getElementById('give-btn');
+    btn.textContent = 'Give $' + selected + ' with love →';
+    if (CHECKOUT_URL) btn.href = CHECKOUT_URL;
+    Array.prototype.forEach.call(amountsEl.children, function (b) {
+      b.classList.toggle('sel', parseInt(b.dataset.v, 10) === selected);
+    });
+  }
 
-        <div class="diagnosis-table" aria-label="Signs, possible diagnoses, and outcomes">
-          <article>
-            <span class="diagnosis-icon" aria-hidden="true">+</span>
-            <h3>Fever, low temperature, poor feeding, extreme sleepiness</h3>
-            <p><strong>Doctors may evaluate for:</strong> sepsis, meningitis, pneumonia, urinary infection, or another serious infection.</p>
-            <p><strong>Can lead to:</strong> shock, seizures, brain injury, hearing loss, developmental delay, cerebral palsy, intellectual disability, or death in severe cases.</p>
-          </article>
-          <article>
-            <span class="diagnosis-icon" aria-hidden="true">!</span>
-            <h3>Yellow skin or eyes, worsening jaundice, hard to wake</h3>
-            <p><strong>Doctors may evaluate for:</strong> high bilirubin, dehydration, feeding problems, blood-type incompatibility, liver or blood conditions.</p>
-            <p><strong>Can lead to:</strong> kernicterus, hearing loss, movement problems, vision problems, developmental delay, or CP-like motor disability if bilirubin reaches dangerous levels.</p>
-          </article>
-          <article>
-            <span class="diagnosis-icon" aria-hidden="true">~</span>
-            <h3>Jerking, stiffening, staring, lip smacking, abnormal eye movement</h3>
-            <p><strong>Doctors may evaluate for:</strong> neonatal seizures caused by infection, low oxygen, stroke, bleeding, low blood sugar, or metabolic problems.</p>
-            <p><strong>Can lead to:</strong> epilepsy, developmental delay, cerebral palsy, intellectual disability, or signs of an underlying brain injury depending on the cause.</p>
-          </article>
-          <article>
-            <span class="diagnosis-icon" aria-hidden="true">O2</span>
-            <h3>Fast breathing, pauses, grunting, ribs pulling in, blue lips</h3>
-            <p><strong>Doctors may evaluate for:</strong> respiratory distress, infection, heart problems, aspiration, or oxygen-level problems.</p>
-            <p><strong>Can lead to:</strong> low oxygen, organ stress, brain injury, seizures, developmental delay, or death if severe and untreated.</p>
-          </article>
-          <article>
-            <span class="diagnosis-icon" aria-hidden="true">!</span>
-            <h3>Fall, head injury, vomiting, swelling, seizure, behavior change</h3>
-            <p><strong>Doctors may evaluate for:</strong> traumatic brain injury, skull fracture, bleeding, concussion, or non-accidental trauma.</p>
-            <p><strong>Can lead to:</strong> seizures, brain injury, vision problems, developmental delay, cerebral palsy, intellectual disability, or death depending on severity.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section response-band" aria-labelledby="response-title">
-        <div>
-          <p class="eyebrow">When in doubt</p>
-          <h2 id="response-title">Do not wait to see if it gets worse.</h2>
-        </div>
-        <p>
-          For a newborn, it is always reasonable to call your pediatrician,
-          nurse line, local emergency number, or 911 when symptoms feel urgent.
-          The video will teach parents to trust early concern, act fast, and
-          seek care before a subtle sign becomes a crisis.
-        </p>
-      </section>
-
-      <section class="section donate-section" id="donate">
-        <div class="donate-copy">
-          <p class="eyebrow">Give today</p>
-          <h2>Help us reach the first $300 goal.</h2>
-          <p>
-            Your donation helps create the first Early Signs video, then
-            expands the roadmap into clinical review, accessible materials,
-            public outreach, and a push for hospitals and birthing centers to
-            show it before families go home.
-          </p>
-        </div>
-        <form
-          class="donation-box"
-          id="donation-form"
-          aria-label="Donation form"
-          data-checkout-url="https://givebutter.com/early-signs-foundation-e1awb1"
-        >
-          <label for="amount">Donation amount</label>
-          <div class="amount-options" role="group" aria-label="Preset donation amounts">
-            <button type="button" data-amount="25">$25</button>
-            <button type="button" data-amount="50">$50</button>
-            <button type="button" data-amount="100">$100</button>
-            <button type="button" data-amount="300">$300</button>
-          </div>
-          <input id="amount" name="amount" type="number" min="1" placeholder="Custom amount" />
-          <button
-            type="submit"
-            class="button button-primary full-width"
-            id="donation-link"
-          >
-            Continue to secure donation
-          </button>
-          <p class="donation-note">
-            Donations are processed through a secure checkout page. You can
-            give a preset amount or enter your own.
-          </p>
-          <p class="donation-status" id="donation-status" role="status"></p>
-        </form>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>Early Signs Foundation</p>
-      <p>Educational information only. Always contact a licensed medical professional for newborn health concerns.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  presets.forEach(function (p) {
+    var b = document.createElement('button');
+    b.className = 'chip-btn';
+    b.dataset.v = p.v;
+    b.innerHTML = '<span class="amt">$' + p.v + '</span><span class="tag">' + p.tag + '</span>';
+    b.addEventListener('click', function () { selected = p.v; render(); });
+    amountsEl.appendChild(b);
+  });
+  render();
+})();
+</script>
+</body>
 </html>
